@@ -98,20 +98,24 @@ namespace ChallengesWithTestsMark8
         {
             //throw new NotImplementedException();
             
-            var below100 = new int[100];
-             
-            for (int i = 0; i >= below100.Length; i++)
+            var below100 = new int[50];
+            var num = 0;
+            for (int i = 0; i < 100; i++)
             {
-                below100[] = i;                
-                      
+               if( i % 2 != 0 )
+                {
+                    below100[num] = i;
+                    num++;
+                }  
             }
             return below100;
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
         {//throw new NotImplementedException();
-            foreach (var word in words)
-            {word.ToString().ToUpper(); }
+            for (int i = 0; i < words.Length; i++)
+
+            { words[i] = words[i].ToUpper(); }
         }
     }
 }
